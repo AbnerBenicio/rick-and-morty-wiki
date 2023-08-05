@@ -39,7 +39,7 @@ const Locations = () => {
     behavior: "smooth",
   });
 
-  if (onlyNumbers.test(pag)) {
+  if (onlyNumbers.test(pag) && pag !== "0") {
     return (
       <div className="panel">
         <h1>Locais</h1>
