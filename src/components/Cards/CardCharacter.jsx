@@ -17,7 +17,7 @@ const CardCharacter = ({ img, name, status, specie }) => {
         <p>{status}</p>
       </div>
       <div className="specie">
-        <label>Specie:</label>
+        <label>Species:</label>
         <p>{specie}</p>
       </div>
     </div>

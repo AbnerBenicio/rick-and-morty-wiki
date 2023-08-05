@@ -33,9 +33,15 @@ const Characters = () => {
     getAPI();
   }, [pag]);
 
+  window.scroll({
+    top: 0,
+    left: 100,
+    behavior: "smooth",
+  })
+
   return (
     <div className="panel">
-      <h1>Personangens</h1>
+      <h1>Personagens</h1>
       <div id="inicio" className="characters">
         {data.map((character) => {
           return (

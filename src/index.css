@@ -394,6 +394,10 @@ main article a {
     border-radius: 20px;
   }
 
+  .panel h1 {
+    font-size: 1.5rem;
+  }
+
   .Error h1 {
     font-size: 100px;
   }

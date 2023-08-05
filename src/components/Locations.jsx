@@ -10,8 +10,6 @@ const Locations = () => {
   const [prev, setPrev] = useState(null);
   const [next, setNext] = useState(null);
 
-  
-
   useEffect(() => {
     const config = {
       headers: {
@@ -32,6 +30,12 @@ const Locations = () => {
     }
     getAPI();
   }, [pag]);
+
+  window.scroll({
+    top: 0,
+    left: 100,
+    behavior: "smooth",
+  });
 
   return (
     <div className="panel">
