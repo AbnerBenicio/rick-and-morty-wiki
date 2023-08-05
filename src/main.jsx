@@ -24,10 +24,12 @@ const router = createBrowserRouter([
       element: <About />
     }, {
       path: "character/:pag",
-      element: <Characters />
+      element: <Characters />,
+      errorElement: <ErrorPage />,
     }, {
       path: "location/:pag",
-      element: <Locations />
+      element: <Locations />,
+      errorElement: <ErrorPage />,
     },]
   }
 ]);
