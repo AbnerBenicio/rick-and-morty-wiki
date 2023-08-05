@@ -6,6 +6,8 @@ import CardPlanet from "./Cards/CardPlanet";
 const Locations = () => {
   const { pag } = useParams();
 
+  const onlyNumbers = new RegExp("^[0-9]+$");
+
   const [data, setData] = useState([]);
   const [prev, setPrev] = useState(null);
   const [next, setNext] = useState(null);
@@ -37,24 +39,28 @@ const Locations = () => {
     behavior: "smooth",
   });
 
-  return (
-    <div className="panel">
-      <h1>Locais</h1>
-      <div id="inicio" className="characters">
-        {data.map((character) => {
-          return (
-            <CardPlanet
-              key={character.id}
-              name={character.name}
-              type={character.type}
-            />
-          );
-        })}
-      </div>
+  if (onlyNumbers.test(pag)) {
+    return (
+      <div className="panel">
+        <h1>Locais</h1>
+        <div id="inicio" className="characters">
+          {data.map((character) => {
+            return (
+              <CardPlanet
+                key={character.id}
+                name={character.name}
+                type={character.type}
+              />
+            );
+          })}
+        </div>
 
-      <Buttons next={next} prev={prev} type="location" pag={pag} />
-    </div>
-  );
+        <Buttons next={next} prev={prev} type="location" pag={pag} />
+      </div>
+    );
+  } else {
+    throw new Error(404);
+  }
 };
 
 export default Locations;

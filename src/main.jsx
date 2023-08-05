@@ -25,12 +25,10 @@ const router = createBrowserRouter([
     }, {
       path: "character/:pag",
       element: <Characters />,
-      errorElement: <ErrorPage />,
     }, {
       path: "location/:pag",
       element: <Locations />,
-      errorElement: <ErrorPage />,
-    },]
+    },],
   }
 ]);
 
